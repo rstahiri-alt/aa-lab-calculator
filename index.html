@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AA Lab Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="AA Logo" class="logo">
+        <h1>AA Lab Calculator</h1>
+        <nav>
+            <a href="#molarity">Molarity</a>
+            <a href="#dilution">Dilution</a>
+            <a href="#conversion">Unit Conversion</a>
+            <a href="#ph">pH</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="molarity">
+            <h2>Molarity Calculator</h2>
+            <form id="molarityForm">
+                <label>Moles (mol): <input type="number" id="moles" required></label>
+                <label>Volume (L): <input type="number" id="volume" required></label>
+                <button type="submit">Calculate</button>
+            </form>
+            <p id="molarityResult"></p>
+        </section>
+
+        <section id="dilution">
+            <h2>Dilution Calculator</h2>
+            <form id="dilutionForm">
+                <label>Initial Concentration (M): <input type="number" id="c1" required></label>
+                <label>Final Volume (L): <input type="number" id="v2" required></label>
+                <label>Final Concentration (M): <input type="number" id="c2" required></label>
+                <button type="submit">Calculate</button>
+            </form>
+            <p id="dilutionResult"></p>
+        </section>
+
+        <section id="conversion">
+            <h2>Unit Conversion</h2>
+            <form id="conversionForm">
+                <label>Value: <input type="number" id="convValue" required></label>
+                <label>From: 
+                    <select id="convFrom">
+                        <option value="g">grams (g)</option>
+                        <option value="mg">milligrams (mg)</option>
+                        <option value="kg">kilograms (kg)</option>
+                        <option value="L">Liters (L)</option>
+                        <option value="mL">milliliters (mL)</option>
+                    </select>
+                </label>
+                <label>To: 
+                    <select id="convTo">
+                        <option value="g">grams (g)</option>
+                        <option value="mg">milligrams (mg)</option>
+                        <option value="kg">kilograms (kg)</option>
+                        <option value="L">Liters (L)</option>
+                        <option value="mL">milliliters (mL)</option>
+                    </select>
+                </label>
+                <button type="submit">Convert</button>
+            </form>
+            <p id="conversionResult"></p>
+        </section>
+
+        <section id="ph">
+            <h2>pH Calculator</h2>
+            <form id="phForm">
+                <label>[H⁺] Concentration (M): <input type="number" id="hConc" required></label>
+                <button type="submit">Calculate</button>
+            </form>
+            <p id="phResult"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>AA Lab Calculator &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<section id="percentage">
+    <h2>Percentage Solution Calculator</h2>
+    <form id="percentageForm">
+        <label>Mass of solute (g): <input type="number" id="soluteMass" required></label>
+        <label>Volume of solution (mL): <input type="number" id="solutionVol" required></label>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="percentageResult"></p>
+</section>
+
+<section id="buffer">
+    <h2>Buffer Solution Calculator (Henderson-Hasselbalch)</h2>
+    <form id="bufferForm">
+        <label>pKa: <input type="number" step="0.01" id="pKa" required></label>
+        <label>[A⁻] (mol/L): <input type="number" step="0.0001" id="Aminus" required></label>
+        <label>[HA] (mol/L): <input type="number" step="0.0001" id="HA" required></label>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="bufferResult"></p>
+</section>
+
